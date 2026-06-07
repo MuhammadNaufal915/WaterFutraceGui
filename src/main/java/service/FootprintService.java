@@ -152,7 +152,7 @@ public class FootprintService {
 
         List<Map<String, Object>> individualResults = new ArrayList<>();
         for (Individual individual : individuals) {
-            double individualCredit = (averageCompanyCredit > 0) ? (bwf / averageCompanyCredit) * 4.0 : 0;
+            double individualCredit = (averageCompanyCredit > 0) ? (averageCompanyCredit / (double) nc) * 0.004 : 0;
             individual.setWaterCredit(individualCredit);
             individualDAO.update(individual);
 

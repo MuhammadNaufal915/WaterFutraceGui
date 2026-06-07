@@ -29,6 +29,7 @@ public class DatabaseInit {
             createTableGovernment(stmt);
             createTableCompany(stmt);
             createTableIndividual(stmt);
+            createTableWaterCreditRequest(stmt);
             createTableProduct(stmt);
             createTableTransactions(stmt);
             createTableTransactionItems(stmt);
@@ -135,6 +136,23 @@ public class DatabaseInit {
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         """);
         System.out.println("[DatabaseInit] Tabel 'individual' OK");
+    }
+
+    private static void createTableWaterCreditRequest(Statement stmt) throws SQLException {
+        stmt.execute("""
+            CREATE TABLE IF NOT EXISTS water_credit_request (
+                id_request    INT AUTO_INCREMENT PRIMARY KEY,
+                id_buyer      INT NOT NULL,
+                id_seller     INT,
+                amount        DOUBLE NOT NULL,
+                mode          ENUM('ONSITE', 'RANDOM') NOT NULL,
+                status        ENUM('PENDING', 'APPROVED', 'REJECTED') NOT NULL DEFAULT 'PENDING',
+                created_at    DATETIME NOT NULL,
+                FOREIGN KEY (id_buyer)  REFERENCES individual(id_individual) ON DELETE CASCADE,
+                FOREIGN KEY (id_seller) REFERENCES individual(id_individual) ON DELETE CASCADE
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        """);
+        System.out.println("[DatabaseInit] Tabel 'water_credit_request' OK");
     }
 
     private static void createTableProduct(Statement stmt) throws SQLException {
