@@ -36,6 +36,7 @@ public class MainFrame extends JFrame {
     private ProductPanel        productPanel;
     private TransactionPanel    transactionPanel;
     private ComplainPanel       complainPanel;
+    private WaterCreditPanel    waterCreditPanel;
 
     public MainFrame() {
         User user = SessionManager.getInstance().getCurrentUser();
@@ -109,6 +110,7 @@ public class MainFrame extends JFrame {
         }
         if (role == ERole.INDIVIDUAL) {
             sidebar.add(navBtn("🛒  Beli Produk", "product"));
+            sidebar.add(navBtn("💧  Beli Water Credit", "watercredit"));
             sidebar.add(navBtn("📜  Riwayat Transaksi", "transaction"));
             sidebar.add(navBtn("📢  Kirim Pengaduan", "complain"));
         }
@@ -219,6 +221,7 @@ public class MainFrame extends JFrame {
         productPanel     = new ProductPanel();
         transactionPanel = new TransactionPanel();
         complainPanel    = new ComplainPanel();
+        waterCreditPanel = new WaterCreditPanel();
 
         contentPanel.add(dashboardPanel,   "dashboard");
         contentPanel.add(userMgmtPanel,    "usermgmt");
@@ -227,6 +230,7 @@ public class MainFrame extends JFrame {
         contentPanel.add(productPanel,     "product");
         contentPanel.add(transactionPanel, "transaction");
         contentPanel.add(complainPanel,    "complain");
+        contentPanel.add(waterCreditPanel, "watercredit");
 
         JPanel wrapper = new JPanel(new BorderLayout());
         wrapper.setBackground(BG_DARK);
@@ -245,6 +249,7 @@ public class MainFrame extends JFrame {
             case "product"     -> productPanel.refresh();
             case "transaction" -> transactionPanel.refresh();
             case "complain"    -> complainPanel.refresh();
+            case "watercredit" -> waterCreditPanel.refresh();
         }
         cardLayout.show(contentPanel, name);
     }

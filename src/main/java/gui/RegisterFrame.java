@@ -7,12 +7,13 @@ import utils.ValidationUtil;
 
 import javax.swing.*;
 import javax.swing.border.*;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.List;
 
 /**
- * RegisterFrame - Form registrasi user baru (INDIVIDUAL / COMPANY / GOVERMENT)
+ * RegisterFrame - Form registrasi user baru yang ringkas dengan JScrollPane kustom.
  */
 public class RegisterFrame extends JDialog {
 
@@ -24,7 +25,8 @@ public class RegisterFrame extends JDialog {
     private static final Color BTN_PRIMARY = new Color(6, 182, 212);
     private static final Color INPUT_BG    = new Color(51, 65, 85);
     private static final Color ERROR_RED   = new Color(239, 68, 68);
-    private static final Font  FONT_LABEL  = new Font("Segoe UI", Font.PLAIN, 13);
+    private static final Font  FONT_LABEL  = new Font("Segoe UI", Font.BOLD, 12);
+    private static final Font  FONT_LABEL_PL = new Font("Segoe UI", Font.PLAIN, 13);
     private static final Font  FONT_TITLE  = new Font("Segoe UI", Font.BOLD, 22);
 
     private final AuthService authService = new AuthService();
@@ -35,14 +37,16 @@ public class RegisterFrame extends JDialog {
     private JPasswordField pfPassword, pfConfirm;
     private JComboBox<String> cbRole, cbRegion;
     private JSpinner    spUsia;
-    private JLabel      lblExtra, lblStatus;
+    private JLabel      lblExtra, lblStatus, lblUsia;
     private JPanel      pnlExtra;
+    private Component   usiaStrut; // Menyimpan referensi jarak spacing dinamis
 
     public RegisterFrame(Frame parent) {
         super(parent, "Registrasi Akun Baru", true);
-        setSize(520, 700);
+        // Ukuran vertikal diperkecil (dari 700 menjadi 550) agar ringkas dan muat di layar kecil
+        setSize(480, 550); 
         setLocationRelativeTo(parent);
-        setResizable(false);
+        setResizable(true); // Izinkan resize karena sudah didukung ScrollPane
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         initUI();
     }
@@ -52,135 +56,141 @@ public class RegisterFrame extends JDialog {
         root.setBackground(BG_DARK);
         setContentPane(root);
 
-        // Header
+        // Header (Tetap diam di atas, tidak ikut ter-scroll)
         JPanel header = new JPanel(new FlowLayout(FlowLayout.CENTER));
         header.setBackground(BG_DARK);
-        header.setBorder(new EmptyBorder(24, 0, 8, 0));
+        header.setBorder(new EmptyBorder(20, 0, 10, 0));
         JLabel title = new JLabel("Buat Akun Baru");
         title.setFont(FONT_TITLE);
         title.setForeground(ACCENT_CYAN);
         header.add(title);
         root.add(header, BorderLayout.NORTH);
 
-        // Card center
+        // Container Form (Menggunakan BoxLayout Y_AXIS)
         JPanel card = new JPanel();
         card.setBackground(BG_CARD);
-        card.setBorder(new CompoundBorder(
-            new EmptyBorder(0, 24, 16, 24),
-            new EmptyBorder(20, 20, 20, 20)
-        ));
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
+        card.setBorder(new EmptyBorder(20, 24, 20, 24));
 
-        // Nama
+        // Pengisian Komponen Form
         card.add(makeLabel("Nama Lengkap"));
         tfName = makeTextField("Masukkan nama lengkap");
-        card.add(tfName); card.add(Box.createVerticalStrut(10));
+        card.add(tfName); card.add(Box.createVerticalStrut(12));
 
-        // Email
         card.add(makeLabel("Email"));
         tfEmail = makeTextField("email@contoh.com");
-        card.add(tfEmail); card.add(Box.createVerticalStrut(10));
+        card.add(tfEmail); card.add(Box.createVerticalStrut(12));
 
-        // Password
         card.add(makeLabel("Password"));
         pfPassword = makePasswordField();
-        card.add(pfPassword); card.add(Box.createVerticalStrut(10));
+        card.add(pfPassword); card.add(Box.createVerticalStrut(12));
 
-        // Konfirmasi Password
         card.add(makeLabel("Konfirmasi Password"));
         pfConfirm = makePasswordField();
-        card.add(pfConfirm); card.add(Box.createVerticalStrut(10));
+        card.add(pfConfirm); card.add(Box.createVerticalStrut(12));
 
-        // Alamat
         card.add(makeLabel("Alamat"));
         tfAlamat = makeTextField("Masukkan alamat");
-        card.add(tfAlamat); card.add(Box.createVerticalStrut(10));
+        card.add(tfAlamat); card.add(Box.createVerticalStrut(12));
 
-        // Role
         card.add(makeLabel("Daftar Sebagai"));
         cbRole = new JComboBox<>(new String[]{"INDIVIDUAL", "COMPANY", "GOVERMENT"});
         styleComboBox(cbRole);
-        card.add(cbRole); card.add(Box.createVerticalStrut(10));
+        card.add(cbRole); card.add(Box.createVerticalStrut(12));
 
-        // Region
         card.add(makeLabel("Region / Wilayah"));
         cbRegion = new JComboBox<>();
         styleComboBox(cbRegion);
         loadRegions();
-        card.add(cbRegion); card.add(Box.createVerticalStrut(10));
+        card.add(cbRegion); card.add(Box.createVerticalStrut(12));
 
-        // Extra field (dinamis berdasarkan role)
+        // Bagian Extra Field Dinamis
         pnlExtra = new JPanel();
         pnlExtra.setLayout(new BoxLayout(pnlExtra, BoxLayout.Y_AXIS));
         pnlExtra.setBackground(BG_CARD);
+        pnlExtra.setAlignmentX(Component.LEFT_ALIGNMENT);
+
         lblExtra = makeLabel("Pekerjaan");
         tfExtra = makeTextField("Masukkan pekerjaan");
-
         pnlExtra.add(lblExtra);
         pnlExtra.add(tfExtra);
-        pnlExtra.add(Box.createVerticalStrut(10));
+        
+        usiaStrut = Box.createVerticalStrut(12);
+        pnlExtra.add(usiaStrut);
 
-        // Usia (INDIVIDUAL only)
-        JLabel lblUsia = makeLabel("Usia");
-        pnlExtra.add(lblUsia);
+        lblUsia = makeLabel("Usia");
         spUsia = new JSpinner(new SpinnerNumberModel(25, 1, 120, 1));
         styleSpinner(spUsia);
+        pnlExtra.add(lblUsia);
         pnlExtra.add(spUsia);
+
         card.add(pnlExtra); card.add(Box.createVerticalStrut(10));
 
-        // Status label
+        // Label Status Error/Validasi
         lblStatus = new JLabel(" ");
         lblStatus.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         lblStatus.setForeground(ERROR_RED);
         lblStatus.setAlignmentX(Component.CENTER_ALIGNMENT);
         card.add(lblStatus); card.add(Box.createVerticalStrut(12));
 
-        // Tombol Register
+        // Tombol Aksi
         JButton btnRegister = makeButton("Daftar Sekarang", BTN_PRIMARY);
         btnRegister.addActionListener(e -> doRegister());
-        card.add(btnRegister); card.add(Box.createVerticalStrut(8));
+        card.add(btnRegister); card.add(Box.createVerticalStrut(10));
 
-        // Link kembali
         JButton btnBack = makeButton("← Kembali ke Login", BG_DARK);
         btnBack.setForeground(ACCENT_CYAN);
         btnBack.addActionListener(e -> dispose());
         card.add(btnBack);
 
-        root.add(card, BorderLayout.CENTER);
+        // MEMBUAT SCROLLPANE & MODIFIKASI TAMPILANNYA (Agar tidak kaku bawaan OS)
+        JScrollPane scrollPane = new JScrollPane(card);
+        scrollPane.setBorder(null);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(16); // Scroll terasa lebih mulus
+        styleScrollBar(scrollPane.getVerticalScrollBar());
+        
+        root.add(scrollPane, BorderLayout.CENTER);
 
-        // Update extra field saat role berubah
+        // Pemicu perubahan field dinamis saat pertama kali dibuka
         cbRole.addActionListener(e -> updateExtraField());
         updateExtraField();
     }
 
     private void updateExtraField() {
         String role = (String) cbRole.getSelectedItem();
-        lblExtra.setVisible(true);
-        tfExtra.setVisible(true);
-        if ("INDIVIDUAL".equals(role)) {
+        boolean isIndividual = "INDIVIDUAL".equals(role);
+
+        // Kontrol visibilitas berbasis object referensi langsung (Aman dari bug index komponen)
+        lblUsia.setVisible(isIndividual);
+        spUsia.setVisible(isIndividual);
+        usiaStrut.setVisible(isIndividual);
+
+        if (isIndividual) {
             lblExtra.setText("Pekerjaan");
             tfExtra.setToolTipText("Masukkan pekerjaan");
-            spUsia.setVisible(true);
-            pnlExtra.getComponent(2).setVisible(true); // usia label
         } else if ("COMPANY".equals(role)) {
             lblExtra.setText("Sektor Perusahaan");
             tfExtra.setToolTipText("Contoh: Manufaktur, Pertanian, dll");
-            spUsia.setVisible(false);
-            pnlExtra.getComponent(2).setVisible(false);
         } else if ("GOVERMENT".equals(role)) {
             lblExtra.setText("Nama Water Basin");
             tfExtra.setToolTipText("Nama sungai / daerah aliran sungai");
-            spUsia.setVisible(false);
-            pnlExtra.getComponent(2).setVisible(false);
         }
+        
         pnlExtra.revalidate();
         pnlExtra.repaint();
     }
 
     private void loadRegions() {
         cbRegion.removeAllItems();
-        List<Region> regions = regionDAO.findAll();
-        for (Region r : regions) cbRegion.addItem(r.getName());
+        try {
+            List<Region> regions = regionDAO.findAll();
+            if (regions != null) {
+                for (Region r : regions) cbRegion.addItem(r.getName());
+            }
+        } catch (Exception e) {
+            showError("Gagal memuat wilayah database.");
+        }
     }
 
     private void doRegister() {
@@ -220,19 +230,20 @@ public class RegisterFrame extends JDialog {
         lblStatus.setForeground(ERROR_RED);
     }
 
-    // ---- Builder Helpers ----
+    // ---- Kustomisasi Helper UI & Styling Modern ----
 
     private JLabel makeLabel(String text) {
         JLabel lbl = new JLabel(text);
-        lbl.setFont(new Font("Segoe UI", Font.BOLD, 12));
+        lbl.setFont(FONT_LABEL);
         lbl.setForeground(TEXT_MUTED);
         lbl.setAlignmentX(Component.LEFT_ALIGNMENT);
+        lbl.setBorder(new EmptyBorder(0, 2, 4, 0));
         return lbl;
     }
 
     private JTextField makeTextField(String placeholder) {
         JTextField tf = new JTextField();
-        tf.setFont(FONT_LABEL);
+        tf.setFont(FONT_LABEL_PL);
         tf.setForeground(TEXT_WHITE);
         tf.setBackground(INPUT_BG);
         tf.setCaretColor(ACCENT_CYAN);
@@ -240,7 +251,6 @@ public class RegisterFrame extends JDialog {
             new LineBorder(new Color(71, 85, 105), 1, true),
             new EmptyBorder(8, 12, 8, 12)
         ));
-        tf.setPreferredSize(new Dimension(Integer.MAX_VALUE, 38));
         tf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
         tf.setAlignmentX(Component.LEFT_ALIGNMENT);
         tf.setToolTipText(placeholder);
@@ -249,7 +259,7 @@ public class RegisterFrame extends JDialog {
 
     private JPasswordField makePasswordField() {
         JPasswordField pf = new JPasswordField();
-        pf.setFont(FONT_LABEL);
+        pf.setFont(FONT_LABEL_PL);
         pf.setForeground(TEXT_WHITE);
         pf.setBackground(INPUT_BG);
         pf.setCaretColor(ACCENT_CYAN);
@@ -263,28 +273,40 @@ public class RegisterFrame extends JDialog {
     }
 
     private void styleComboBox(JComboBox<?> cb) {
-        cb.setFont(FONT_LABEL);
+        cb.setFont(FONT_LABEL_PL);
         cb.setForeground(TEXT_WHITE);
         cb.setBackground(INPUT_BG);
         cb.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
         cb.setAlignmentX(Component.LEFT_ALIGNMENT);
+        cb.setBorder(new LineBorder(new Color(71, 85, 105), 1, true));
     }
 
     private void styleSpinner(JSpinner sp) {
-        sp.setFont(FONT_LABEL);
+        sp.setFont(FONT_LABEL_PL);
         sp.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
         sp.setAlignmentX(Component.LEFT_ALIGNMENT);
+        sp.setBorder(new LineBorder(new Color(71, 85, 105), 1, true));
+        
+        // Menembus warna editor internal spinner agar senada dengan warna input_bg
+        JComponent editor = sp.getEditor();
+        if (editor instanceof JSpinner.DefaultEditor) {
+            JTextField tf = ((JSpinner.DefaultEditor) editor).getTextField();
+            tf.setBackground(INPUT_BG);
+            tf.setForeground(TEXT_WHITE);
+            tf.setCaretColor(ACCENT_CYAN);
+            tf.setBorder(new EmptyBorder(0, 4, 0, 4));
+        }
     }
 
     private JButton makeButton(String text, Color bg) {
         JButton btn = new JButton(text);
-        btn.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         btn.setForeground(TEXT_WHITE);
         btn.setBackground(bg);
         btn.setBorderPainted(false);
         btn.setFocusPainted(false);
         btn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
+        btn.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
         btn.setAlignmentX(Component.LEFT_ALIGNMENT);
         btn.addMouseListener(new MouseAdapter() {
             final Color orig = bg;
@@ -292,5 +314,34 @@ public class RegisterFrame extends JDialog {
             @Override public void mouseExited(MouseEvent e)  { btn.setBackground(orig); }
         });
         return btn;
+    }
+
+    /**
+     * Kustomisasi Scrollbar UI agar memiliki tampilan modern pipih (flat dark)
+     */
+    private void styleScrollBar(JScrollBar scrollBar) {
+        scrollBar.setPreferredSize(new Dimension(8, Integer.MAX_VALUE));
+        scrollBar.setBackground(BG_DARK);
+        scrollBar.setUI(new BasicScrollBarUI() {
+            @Override
+            protected JButton createDecreaseButton(int orientation) { return createZeroButton(); }
+            @Override
+            protected JButton createIncreaseButton(int orientation) { return createZeroButton(); }
+            @Override
+            protected void paintTrack(Graphics g, JComponent c, Rectangle trackBounds) {
+                g.setColor(BG_DARK);
+                g.fillRect(trackBounds.x, trackBounds.y, trackBounds.width, trackBounds.height);
+            }
+            @Override
+            protected void paintThumb(Graphics g, JComponent c, Rectangle thumbBounds) {
+                g.setColor(INPUT_BG);
+                g.fillRect(thumbBounds.x, thumbBounds.y, thumbBounds.width, thumbBounds.height);
+            }
+            private JButton createZeroButton() {
+                JButton jb = new JButton();
+                jb.setPreferredSize(new Dimension(0, 0));
+                return jb;
+            }
+        });
     }
 }

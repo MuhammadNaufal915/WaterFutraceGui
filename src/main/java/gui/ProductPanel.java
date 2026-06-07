@@ -35,7 +35,12 @@ public class ProductPanel extends JPanel {
     // Form fields
     private JTextField      tfProductName, tfWaterCredit, tfEntitas;
     private JPanel          formPanel;
+    private JLabel          lblFormTitle; // Dijadikan variabel agar judul form bisa berubah dinamis
+    private JButton         btnSave;      // Dijadikan variabel agar teks tombol bisa berubah
     private boolean         isCompany;
+    
+    // --- PENYELAMAT BUG ---
+    private Integer         selectedProductId = null; // Menyimpan ID produk yang sedang diedit
 
     public ProductPanel() {
         setBackground(BG);
@@ -127,10 +132,10 @@ public class ProductPanel extends JPanel {
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
         card.setBorder(new EmptyBorder(24, 24, 24, 24));
 
-        JLabel title = new JLabel("Tambah / Edit Produk");
-        title.setFont(new Font("Segoe UI", Font.BOLD, 16));
-        title.setForeground(CYAN);
-        card.add(title);
+        lblFormTitle = new JLabel("Tambah Produk Baru");
+        lblFormTitle.setFont(new Font("Segoe UI", Font.BOLD, 16));
+        lblFormTitle.setForeground(CYAN);
+        card.add(lblFormTitle);
         card.add(Box.createVerticalStrut(20));
 
         card.add(fieldLabel("Nama Produk"));
@@ -150,7 +155,7 @@ public class ProductPanel extends JPanel {
         note.setForeground(TEXT_MUTED);
         card.add(note); card.add(Box.createVerticalStrut(12));
 
-        JButton btnSave = actionBtn("💾 Simpan Produk", GREEN);
+        btnSave = actionBtn("💾 Simpan Produk", GREEN);
         btnSave.setMaximumSize(new Dimension(Integer.MAX_VALUE, 44));
         btnSave.addActionListener(e -> saveProduct());
         card.add(btnSave); card.add(Box.createVerticalStrut(8));
@@ -213,8 +218,16 @@ public class ProductPanel extends JPanel {
         int   ent = Integer.parseInt(entStr);
 
         try {
-            productService.createProduct(user, name, wc, ent);
-            setOk("✅ Produk berhasil ditambahkan.");
+            if (selectedProductId == null) {
+                // JIKA MODE TAMBAH BARU (ID NULL)
+                productService.createProduct(user, name, wc, ent);
+                setOk("✅ Produk berhasil ditambahkan.");
+            } else {
+                // JIKA MODE EDIT/UPDATE (ID TERSEDIA)
+                // Catatan: Pastikan method updateProduct ini sudah ada di ProductService Anda!
+                productService.updateProduct(user,selectedProductId, name, wc, ent);
+                setOk("✅ Produk berhasil diperbarui.");
+            }
             clearForm();
             refresh();
         } catch (Exception ex) {
@@ -232,6 +245,9 @@ public class ProductPanel extends JPanel {
         try {
             productService.deleteProduct(SessionManager.getInstance().getCurrentUser(), id);
             setOk("✅ Produk dihapus.");
+            if (selectedProductId != null && selectedProductId == id) {
+                clearForm(); // Bersihkan form jika produk yang sedang diedit justru dihapus
+            }
             refresh();
         } catch (Exception ex) {
             setErr(ex.getMessage());
@@ -240,14 +256,37 @@ public class ProductPanel extends JPanel {
 
     private void loadToForm() {
         int row = table.getSelectedRow();
-        if (row < 0) { JOptionPane.showMessageDialog(this, "Pilih produk terlebih dahulu.", "Peringatan", JOptionPane.WARNING_MESSAGE); return; }
+        if (row < 0) { 
+            JOptionPane.showMessageDialog(this, "Pilih produk dari tabel terlebih dahulu.", "Peringatan", JOptionPane.WARNING_MESSAGE); 
+            return; 
+        }
+        
+        // 1. Ambil ID unik dari kolom index 0 dan simpan ke state global panel
+        selectedProductId = (int) tableModel.getValueAt(row, 0);
+        
+        // 2. Set field teks
         tfProductName.setText((String) tableModel.getValueAt(row, 1));
         tfWaterCredit.setText(tableModel.getValueAt(row, 2).toString().replace(",", "."));
         tfEntitas.setText(tableModel.getValueAt(row, 3).toString());
+        
+        // 3. Ubah kosmetik judul form & tombol agar user tahu mereka sedang mengedit data
+        lblFormTitle.setText("✏️ Edit Produk (ID: " + selectedProductId + ")");
+        btnSave.setText("💾 Perbarui Produk");
+        btnSave.setBackground(AMBER);
     }
 
     private void clearForm() {
-        tfProductName.setText(""); tfWaterCredit.setText(""); tfEntitas.setText("");
+        tfProductName.setText(""); 
+        tfWaterCredit.setText(""); 
+        tfEntitas.setText("");
+        
+        // Kembalikan status form ke mode Insert awal
+        selectedProductId = null; 
+        if (lblFormTitle != null) lblFormTitle.setText("Tambah Produk Baru");
+        if (btnSave != null) {
+            btnSave.setText("💾 Simpan Produk");
+            btnSave.setBackground(GREEN);
+        }
     }
 
     private void setErr(String m) { lblStatus.setText("❌ " + m); lblStatus.setForeground(DANGER); }
