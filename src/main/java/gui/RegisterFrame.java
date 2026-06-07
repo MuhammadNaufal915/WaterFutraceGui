@@ -17,13 +17,15 @@ import java.util.List;
  */
 public class RegisterFrame extends JDialog {
 
-    private static final Color BG_DARK     = new Color(15, 23, 42);
-    private static final Color BG_CARD     = new Color(30, 41, 59);
-    private static final Color ACCENT_CYAN = new Color(0, 212, 255);
-    private static final Color TEXT_WHITE  = new Color(248, 250, 252);
-    private static final Color TEXT_MUTED  = new Color(148, 163, 184);
-    private static final Color BTN_PRIMARY = new Color(6, 182, 212);
-    private static final Color INPUT_BG    = new Color(51, 65, 85);
+    private static final Color BG_DARK     = new Color(238, 242, 247);
+    private static final Color BG_CARD     = new Color(255, 255, 255);
+    private static final Color ACCENT_CYAN = new Color(37, 99, 235); // Royal Blue
+    private static final Color TEXT_DARK   = new Color(15, 23, 42); // Dark slate
+    private static final Color TEXT_WHITE  = Color.WHITE;
+    private static final Color TEXT_MUTED  = new Color(100, 116, 139);
+    private static final Color BTN_PRIMARY = new Color(37, 99, 235);
+    private static final Color INPUT_BG    = new Color(248, 250, 252);
+    private static final Color INPUT_BORDER = new Color(226, 232, 240);
     private static final Color ERROR_RED   = new Color(239, 68, 68);
     private static final Font  FONT_LABEL  = new Font("Segoe UI", Font.BOLD, 12);
     private static final Font  FONT_LABEL_PL = new Font("Segoe UI", Font.PLAIN, 13);
@@ -244,11 +246,11 @@ public class RegisterFrame extends JDialog {
     private JTextField makeTextField(String placeholder) {
         JTextField tf = new JTextField();
         tf.setFont(FONT_LABEL_PL);
-        tf.setForeground(TEXT_WHITE);
+        tf.setForeground(TEXT_DARK);
         tf.setBackground(INPUT_BG);
         tf.setCaretColor(ACCENT_CYAN);
         tf.setBorder(new CompoundBorder(
-            new LineBorder(new Color(71, 85, 105), 1, true),
+            new LineBorder(INPUT_BORDER, 1, true),
             new EmptyBorder(8, 12, 8, 12)
         ));
         tf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
@@ -260,11 +262,11 @@ public class RegisterFrame extends JDialog {
     private JPasswordField makePasswordField() {
         JPasswordField pf = new JPasswordField();
         pf.setFont(FONT_LABEL_PL);
-        pf.setForeground(TEXT_WHITE);
+        pf.setForeground(TEXT_DARK);
         pf.setBackground(INPUT_BG);
         pf.setCaretColor(ACCENT_CYAN);
         pf.setBorder(new CompoundBorder(
-            new LineBorder(new Color(71, 85, 105), 1, true),
+            new LineBorder(INPUT_BORDER, 1, true),
             new EmptyBorder(8, 12, 8, 12)
         ));
         pf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
@@ -274,25 +276,25 @@ public class RegisterFrame extends JDialog {
 
     private void styleComboBox(JComboBox<?> cb) {
         cb.setFont(FONT_LABEL_PL);
-        cb.setForeground(TEXT_WHITE);
+        cb.setForeground(TEXT_DARK);
         cb.setBackground(INPUT_BG);
         cb.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
         cb.setAlignmentX(Component.LEFT_ALIGNMENT);
-        cb.setBorder(new LineBorder(new Color(71, 85, 105), 1, true));
+        cb.setBorder(new LineBorder(INPUT_BORDER, 1, true));
     }
 
     private void styleSpinner(JSpinner sp) {
         sp.setFont(FONT_LABEL_PL);
         sp.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38));
         sp.setAlignmentX(Component.LEFT_ALIGNMENT);
-        sp.setBorder(new LineBorder(new Color(71, 85, 105), 1, true));
+        sp.setBorder(new LineBorder(INPUT_BORDER, 1, true));
         
         // Menembus warna editor internal spinner agar senada dengan warna input_bg
         JComponent editor = sp.getEditor();
         if (editor instanceof JSpinner.DefaultEditor) {
             JTextField tf = ((JSpinner.DefaultEditor) editor).getTextField();
             tf.setBackground(INPUT_BG);
-            tf.setForeground(TEXT_WHITE);
+            tf.setForeground(TEXT_DARK);
             tf.setCaretColor(ACCENT_CYAN);
             tf.setBorder(new EmptyBorder(0, 4, 0, 4));
         }

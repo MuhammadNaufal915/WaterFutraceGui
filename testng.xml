@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    testng.xml - Konfigurasi TestNG Suite untuk WaterFutrace
+    Menjalankan semua test di TesApp.java secara berurutan sesuai dependensi group.
+-->
+<suite name="WaterFutraceTestSuite" verbose="2">
+
+    <test name="WaterFutrace Integration Tests">
+        <groups>
+            <run>
+                <!-- Urutan group: db -> util -> region -> register -> login -> approve
+                                  -> footprint -> product -> transaction -> wc_request
+                                  -> complain -> cleanup -->
+                <include name="db"/>
+                <include name="util"/>
+                <include name="region"/>
+                <include name="register"/>
+                <include name="login"/>
+                <include name="approve"/>
+                <include name="footprint"/>
+                <include name="product"/>
+                <include name="transaction"/>
+                <include name="wc_request"/>
+                <include name="complain"/>
+                <include name="cleanup"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="TesApp"/>
+        </classes>
+    </test>
+
+</suite>

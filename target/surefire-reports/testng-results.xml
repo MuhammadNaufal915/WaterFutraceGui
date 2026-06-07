@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="47" passed="47" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-07T17:05:47 WIB" name="WaterFutraceTestSuite" finished-at="2026-06-07T17:05:52 WIB" duration-ms="5265">
+    <groups>
+      <group name="product">
+        <method signature="TesApp.testCreateProduct()[pri:0, instance:TesApp@5ad851c9]" name="testCreateProduct" class="TesApp"/>
+        <method signature="TesApp.testCreateProductInsufficientCreditFails()[pri:0, instance:TesApp@5ad851c9]" name="testCreateProductInsufficientCreditFails" class="TesApp"/>
+        <method signature="TesApp.testGetAllProducts()[pri:0, instance:TesApp@5ad851c9]" name="testGetAllProducts" class="TesApp"/>
+        <method signature="TesApp.testGetMyProducts()[pri:0, instance:TesApp@5ad851c9]" name="testGetMyProducts" class="TesApp"/>
+        <method signature="TesApp.testUpdateProduct()[pri:0, instance:TesApp@5ad851c9]" name="testUpdateProduct" class="TesApp"/>
+      </group> <!-- product -->
+      <group name="footprint">
+        <method signature="TesApp.testCalculateGovernmentFootprint()[pri:0, instance:TesApp@5ad851c9]" name="testCalculateGovernmentFootprint" class="TesApp"/>
+        <method signature="TesApp.testSetCompanyEtaSl()[pri:0, instance:TesApp@5ad851c9]" name="testSetCompanyEtaSl" class="TesApp"/>
+        <method signature="TesApp.testDistributeCredit()[pri:0, instance:TesApp@5ad851c9]" name="testDistributeCredit" class="TesApp"/>
+        <method signature="TesApp.testCalculateCompanyCredit()[pri:0, instance:TesApp@5ad851c9]" name="testCalculateCompanyCredit" class="TesApp"/>
+        <method signature="TesApp.testGetRegionalCompanyCredit()[pri:0, instance:TesApp@5ad851c9]" name="testGetRegionalCompanyCredit" class="TesApp"/>
+      </group> <!-- footprint -->
+      <group name="util">
+        <method signature="TesApp.testPasswordHashAndVerify()[pri:0, instance:TesApp@5ad851c9]" name="testPasswordHashAndVerify" class="TesApp"/>
+        <method signature="TesApp.testPasswordHashIsUnique()[pri:0, instance:TesApp@5ad851c9]" name="testPasswordHashIsUnique" class="TesApp"/>
+      </group> <!-- util -->
+      <group name="wc_request">
+        <method signature="TesApp.testCreateOnsiteRequest()[pri:0, instance:TesApp@5ad851c9]" name="testCreateOnsiteRequest" class="TesApp"/>
+        <method signature="TesApp.testApproveOnsiteRequest()[pri:0, instance:TesApp@5ad851c9]" name="testApproveOnsiteRequest" class="TesApp"/>
+        <method signature="TesApp.testApproveAlreadyProcessedRequestFails()[pri:0, instance:TesApp@5ad851c9]" name="testApproveAlreadyProcessedRequestFails" class="TesApp"/>
+        <method signature="TesApp.testCreateRandomRequest()[pri:0, instance:TesApp@5ad851c9]" name="testCreateRandomRequest" class="TesApp"/>
+        <method signature="TesApp.testGetAllIndividualsSorted()[pri:0, instance:TesApp@5ad851c9]" name="testGetAllIndividualsSorted" class="TesApp"/>
+        <method signature="TesApp.testGetSentRequests()[pri:0, instance:TesApp@5ad851c9]" name="testGetSentRequests" class="TesApp"/>
+      </group> <!-- wc_request -->
+      <group name="cleanup">
+        <method signature="TesApp.testCleanupTestData()[pri:0, instance:TesApp@5ad851c9]" name="testCleanupTestData" class="TesApp"/>
+      </group> <!-- cleanup -->
+      <group name="approve">
+        <method signature="TesApp.testApproveCompany()[pri:0, instance:TesApp@5ad851c9]" name="testApproveCompany" class="TesApp"/>
+        <method signature="TesApp.testLoginApprovedCompanySuccess()[pri:0, instance:TesApp@5ad851c9]" name="testLoginApprovedCompanySuccess" class="TesApp"/>
+        <method signature="TesApp.testApproveIndividual1()[pri:0, instance:TesApp@5ad851c9]" name="testApproveIndividual1" class="TesApp"/>
+        <method signature="TesApp.testApproveIndividual2()[pri:0, instance:TesApp@5ad851c9]" name="testApproveIndividual2" class="TesApp"/>
+        <method signature="TesApp.testGetPendingUsers()[pri:0, instance:TesApp@5ad851c9]" name="testGetPendingUsers" class="TesApp"/>
+      </group> <!-- approve -->
+      <group name="complain">
+        <method signature="TesApp.testInsertComplain()[pri:0, instance:TesApp@5ad851c9]" name="testInsertComplain" class="TesApp"/>
+        <method signature="TesApp.testFindComplainByReceiver()[pri:0, instance:TesApp@5ad851c9]" name="testFindComplainByReceiver" class="TesApp"/>
+        <method signature="TesApp.testFindComplainBySender()[pri:0, instance:TesApp@5ad851c9]" name="testFindComplainBySender" class="TesApp"/>
+        <method signature="TesApp.testUpdateComplain()[pri:0, instance:TesApp@5ad851c9]" name="testUpdateComplain" class="TesApp"/>
+        <method signature="TesApp.testResolveComplain()[pri:0, instance:TesApp@5ad851c9]" name="testResolveComplain" class="TesApp"/>
+      </group> <!-- complain -->
+      <group name="region">
+        <method signature="TesApp.testRegionExists()[pri:0, instance:TesApp@5ad851c9]" name="testRegionExists" class="TesApp"/>
+        <method signature="TesApp.testRegionFindAll()[pri:0, instance:TesApp@5ad851c9]" name="testRegionFindAll" class="TesApp"/>
+      </group> <!-- region -->
+      <group name="login">
+        <method signature="TesApp.testLoginUnknownEmailFails()[pri:0, instance:TesApp@5ad851c9]" name="testLoginUnknownEmailFails" class="TesApp"/>
+        <method signature="TesApp.testLoginUnapprovedCompanyFails()[pri:0, instance:TesApp@5ad851c9]" name="testLoginUnapprovedCompanyFails" class="TesApp"/>
+        <method signature="TesApp.testLoginGovernmentSuccess()[pri:0, instance:TesApp@5ad851c9]" name="testLoginGovernmentSuccess" class="TesApp"/>
+        <method signature="TesApp.testLoginWrongPasswordFails()[pri:0, instance:TesApp@5ad851c9]" name="testLoginWrongPasswordFails" class="TesApp"/>
+      </group> <!-- login -->
+      <group name="transaction">
+        <method signature="TesApp.testPurchaseProduct()[pri:0, instance:TesApp@5ad851c9]" name="testPurchaseProduct" class="TesApp"/>
+        <method signature="TesApp.testGetAllTransactions()[pri:0, instance:TesApp@5ad851c9]" name="testGetAllTransactions" class="TesApp"/>
+        <method signature="TesApp.testGetMyTransactions()[pri:0, instance:TesApp@5ad851c9]" name="testGetMyTransactions" class="TesApp"/>
+        <method signature="TesApp.testPurchaseInsufficientCreditFails()[pri:0, instance:TesApp@5ad851c9]" name="testPurchaseInsufficientCreditFails" class="TesApp"/>
+        <method signature="TesApp.testPurchaseZeroQuantityFails()[pri:0, instance:TesApp@5ad851c9]" name="testPurchaseZeroQuantityFails" class="TesApp"/>
+      </group> <!-- transaction -->
+      <group name="db">
+        <method signature="TesApp.testDatabaseConnection()[pri:0, instance:TesApp@5ad851c9]" name="testDatabaseConnection" class="TesApp"/>
+      </group> <!-- db -->
+      <group name="register">
+        <method signature="TesApp.testRegisterCompany()[pri:0, instance:TesApp@5ad851c9]" name="testRegisterCompany" class="TesApp"/>
+        <method signature="TesApp.testRegisterGovernment()[pri:0, instance:TesApp@5ad851c9]" name="testRegisterGovernment" class="TesApp"/>
+        <method signature="TesApp.testRegisterDuplicateEmailFails()[pri:0, instance:TesApp@5ad851c9]" name="testRegisterDuplicateEmailFails" class="TesApp"/>
+        <method signature="TesApp.testRegisterIndividual1()[pri:0, instance:TesApp@5ad851c9]" name="testRegisterIndividual1" class="TesApp"/>
+        <method signature="TesApp.testRegisterIndividual2()[pri:0, instance:TesApp@5ad851c9]" name="testRegisterIndividual2" class="TesApp"/>
+        <method signature="TesApp.testRegisterInvalidRegionFails()[pri:0, instance:TesApp@5ad851c9]" name="testRegisterInvalidRegionFails" class="TesApp"/>
+      </group> <!-- register -->
+    </groups>
+    <test started-at="2026-06-07T17:05:47 WIB" name="WaterFutrace Integration Tests" finished-at="2026-06-07T17:05:52 WIB" duration-ms="5265">
+      <class name="TesApp">
+        <test-method signature="testDatabaseConnection()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testDatabaseConnection" description="Verifikasi koneksi ke database MySQL berhasil" finished-at="2026-06-07T17:05:47 WIB" duration-ms="488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDatabaseConnection -->
+        <test-method signature="testPasswordHashAndVerify()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testPasswordHashAndVerify" description="Hashing password menghasilkan hash yang dapat diverifikasi" finished-at="2026-06-07T17:05:47 WIB" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordHashAndVerify -->
+        <test-method signature="testPasswordHashIsUnique()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testPasswordHashIsUnique" description="Setiap hashing menghasilkan hash yang berbeda (salt acak)" finished-at="2026-06-07T17:05:47 WIB" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordHashIsUnique -->
+        <test-method signature="testLoginUnknownEmailFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testLoginUnknownEmailFails" description="Login dengan email tidak terdaftar harus gagal" depends-on-groups="db" finished-at="2026-06-07T17:05:47 WIB" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginUnknownEmailFails -->
+        <test-method signature="testRegionExists()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testRegionExists" description="Region &#039;Jawa Barat&#039; ditemukan di database" depends-on-groups="db" finished-at="2026-06-07T17:05:47 WIB" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegionExists -->
+        <test-method signature="testRegionFindAll()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testRegionFindAll" description="findAll region mengembalikan data" depends-on-groups="db" finished-at="2026-06-07T17:05:47 WIB" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegionFindAll -->
+        <test-method signature="testRegisterCompany()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testRegisterCompany" description="Registrasi akun COMPANY berhasil (belum approved)" depends-on-groups="region" finished-at="2026-06-07T17:05:47 WIB" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterCompany -->
+        <test-method signature="testRegisterGovernment()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:47 WIB" name="testRegisterGovernment" description="Registrasi akun GOVERNMENT berhasil dan langsung approved" depends-on-groups="region" finished-at="2026-06-07T17:05:48 WIB" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterGovernment -->
+        <test-method signature="testRegisterIndividual1()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testRegisterIndividual1" description="Registrasi akun INDIVIDUAL pertama berhasil" depends-on-groups="region" finished-at="2026-06-07T17:05:48 WIB" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterIndividual1 -->
+        <test-method signature="testRegisterIndividual2()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testRegisterIndividual2" description="Registrasi akun INDIVIDUAL kedua berhasil" depends-on-groups="region" finished-at="2026-06-07T17:05:48 WIB" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterIndividual2 -->
+        <test-method signature="testRegisterInvalidRegionFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testRegisterInvalidRegionFails" description="Registrasi dengan region tidak valid harus melempar exception" depends-on-groups="region" finished-at="2026-06-07T17:05:48 WIB" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterInvalidRegionFails -->
+        <test-method signature="testLoginUnapprovedCompanyFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testLoginUnapprovedCompanyFails" description="Login Company yang belum diapprove harus gagal" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testRegisterCompany" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginUnapprovedCompanyFails -->
+        <test-method signature="testLoginGovernmentSuccess()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testLoginGovernmentSuccess" description="Login Government dengan kredensial benar berhasil" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testRegisterGovernment" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginGovernmentSuccess -->
+        <test-method signature="testLoginWrongPasswordFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testLoginWrongPasswordFails" description="Login dengan password salah harus gagal" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testRegisterGovernment" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWrongPasswordFails -->
+        <test-method signature="testRegisterDuplicateEmailFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testRegisterDuplicateEmailFails" description="Registrasi dengan email duplikat harus melempar exception" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testRegisterGovernment" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterDuplicateEmailFails -->
+        <test-method signature="testApproveCompany()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testApproveCompany" description="Government berhasil approve Company" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testLoginGovernmentSuccess, TesApp.testRegisterCompany" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApproveCompany -->
+        <test-method signature="testApproveIndividual1()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testApproveIndividual1" description="Government berhasil approve Individual 1" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testRegisterIndividual1, TesApp.testLoginGovernmentSuccess" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApproveIndividual1 -->
+        <test-method signature="testApproveIndividual2()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testApproveIndividual2" description="Government berhasil approve Individual 2" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testLoginGovernmentSuccess, TesApp.testRegisterIndividual2" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApproveIndividual2 -->
+        <test-method signature="testGetPendingUsers()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testGetPendingUsers" description="getPendingUsersInRegion mengembalikan user yang belum diapprove" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testRegisterIndividual1, TesApp.testRegisterIndividual2, TesApp.testLoginGovernmentSuccess, TesApp.testRegisterCompany" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPendingUsers -->
+        <test-method signature="testLoginApprovedCompanySuccess()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testLoginApprovedCompanySuccess" description="Login Company berhasil setelah diapprove" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testApproveCompany" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginApprovedCompanySuccess -->
+        <test-method signature="testInsertComplain()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testInsertComplain" description="Individual berhasil mengirim komplain ke Government" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testLoginGovernmentSuccess, TesApp.testApproveIndividual1" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInsertComplain -->
+        <test-method signature="testCreateOnsiteRequest()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testCreateOnsiteRequest" description="Individual membuat permintaan beli water credit ONSITE" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testApproveIndividual1, TesApp.testApproveIndividual2" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateOnsiteRequest -->
+        <test-method signature="testCreateRandomRequest()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testCreateRandomRequest" description="Individual membuat permintaan beli water credit RANDOM/broadcast" finished-at="2026-06-07T17:05:48 WIB" depends-on-methods="TesApp.testApproveIndividual2" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateRandomRequest -->
+        <test-method signature="testGetAllIndividualsSorted()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:48 WIB" name="testGetAllIndividualsSorted" description="getAllIndividualsSorted mengembalikan list individual terurut" finished-at="2026-06-07T17:05:49 WIB" depends-on-methods="TesApp.testApproveIndividual1, TesApp.testApproveIndividual2" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllIndividualsSorted -->
+        <test-method signature="testCalculateGovernmentFootprint()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testCalculateGovernmentFootprint" description="Government berhasil menghitung Blue Water Footprint" depends-on-groups="approve" finished-at="2026-06-07T17:05:49 WIB" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCalculateGovernmentFootprint -->
+        <test-method signature="testFindComplainByReceiver()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testFindComplainByReceiver" description="findByReceiver mengembalikan komplain yang diterima Government" finished-at="2026-06-07T17:05:49 WIB" depends-on-methods="TesApp.testInsertComplain" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindComplainByReceiver -->
+        <test-method signature="testFindComplainBySender()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testFindComplainBySender" description="findBySender mengembalikan komplain yang dikirim user" finished-at="2026-06-07T17:05:49 WIB" depends-on-methods="TesApp.testInsertComplain" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindComplainBySender -->
+        <test-method signature="testApproveOnsiteRequest()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testApproveOnsiteRequest" description="Seller berhasil menyetujui permintaan ONSITE" finished-at="2026-06-07T17:05:49 WIB" depends-on-methods="TesApp.testCreateOnsiteRequest" duration-ms="444" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApproveOnsiteRequest -->
+        <test-method signature="testGetSentRequests()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testGetSentRequests" description="getSentRequests mengembalikan request yang dikirim buyer" finished-at="2026-06-07T17:05:49 WIB" depends-on-methods="TesApp.testCreateOnsiteRequest" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetSentRequests -->
+        <test-method signature="testUpdateComplain()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testUpdateComplain" description="Government berhasil membalas dan mengupdate status komplain" finished-at="2026-06-07T17:05:49 WIB" depends-on-methods="TesApp.testInsertComplain" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateComplain -->
+        <test-method signature="testApproveAlreadyProcessedRequestFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:49 WIB" name="testApproveAlreadyProcessedRequestFails" description="Menyetujui request yang sudah diproses harus gagal" finished-at="2026-06-07T17:05:50 WIB" depends-on-methods="TesApp.testApproveOnsiteRequest" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApproveAlreadyProcessedRequestFails -->
+        <test-method signature="testSetCompanyEtaSl()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:50 WIB" name="testSetCompanyEtaSl" description="Set eta dan sl pada Company untuk keperluan distribusi" finished-at="2026-06-07T17:05:50 WIB" depends-on-methods="TesApp.testCalculateGovernmentFootprint" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCompanyEtaSl -->
+        <test-method signature="testResolveComplain()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:50 WIB" name="testResolveComplain" description="Government menyelesaikan komplain dengan status RESOLVED" finished-at="2026-06-07T17:05:50 WIB" depends-on-methods="TesApp.testUpdateComplain" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResolveComplain -->
+        <test-method signature="testDistributeCredit()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:50 WIB" name="testDistributeCredit" description="Distribusi water credit ke Company dan Individual berhasil" finished-at="2026-06-07T17:05:50 WIB" depends-on-methods="TesApp.testSetCompanyEtaSl, TesApp.testApproveIndividual1, TesApp.testApproveIndividual2" duration-ms="327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDistributeCredit -->
+        <test-method signature="testCalculateCompanyCredit()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:50 WIB" name="testCalculateCompanyCredit" description="Company berhasil menghitung water credit sendiri" finished-at="2026-06-07T17:05:50 WIB" depends-on-methods="TesApp.testDistributeCredit" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCalculateCompanyCredit -->
+        <test-method signature="testCreateProduct()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:50 WIB" name="testCreateProduct" description="Company berhasil membuat produk baru" finished-at="2026-06-07T17:05:50 WIB" depends-on-methods="TesApp.testDistributeCredit" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateProduct -->
+        <test-method signature="testGetRegionalCompanyCredit()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:50 WIB" name="testGetRegionalCompanyCredit" description="Individual mendapatkan total regional company credit" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testDistributeCredit" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRegionalCompanyCredit -->
+        <test-method signature="testCreateProductInsufficientCreditFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testCreateProductInsufficientCreditFails" description="Pembuatan produk gagal jika water credit tidak cukup" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testCreateProduct" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateProductInsufficientCreditFails -->
+        <test-method signature="testGetAllProducts()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testGetAllProducts" description="getAllProducts mengembalikan daftar produk" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testCreateProduct" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllProducts -->
+        <test-method signature="testGetMyProducts()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testGetMyProducts" description="getMyProducts mengembalikan produk milik Company" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testCreateProduct" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMyProducts -->
+        <test-method signature="testUpdateProduct()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testUpdateProduct" description="Company berhasil mengupdate produk" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testCreateProduct" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateProduct -->
+        <test-method signature="testPurchaseProduct()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testPurchaseProduct" description="Individual berhasil membeli produk" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testUpdateProduct, TesApp.testApproveIndividual1" duration-ms="262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPurchaseProduct -->
+        <test-method signature="testGetAllTransactions()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testGetAllTransactions" description="getAllTransactions mengembalikan semua transaksi" finished-at="2026-06-07T17:05:51 WIB" depends-on-methods="TesApp.testPurchaseProduct" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllTransactions -->
+        <test-method signature="testGetMyTransactions()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:51 WIB" name="testGetMyTransactions" description="getMyTransactions mengembalikan riwayat transaksi Individual" finished-at="2026-06-07T17:05:52 WIB" depends-on-methods="TesApp.testPurchaseProduct" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMyTransactions -->
+        <test-method signature="testPurchaseInsufficientCreditFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:52 WIB" name="testPurchaseInsufficientCreditFails" description="Pembelian gagal jika water credit tidak cukup" finished-at="2026-06-07T17:05:52 WIB" depends-on-methods="TesApp.testPurchaseProduct" duration-ms="75" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPurchaseInsufficientCreditFails -->
+        <test-method signature="testPurchaseZeroQuantityFails()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:52 WIB" name="testPurchaseZeroQuantityFails" description="Pembelian dengan quantity &lt;= 0 harus gagal" finished-at="2026-06-07T17:05:52 WIB" depends-on-methods="TesApp.testPurchaseProduct" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPurchaseZeroQuantityFails -->
+        <test-method signature="testCleanupTestData()[pri:0, instance:TesApp@5ad851c9]" started-at="2026-06-07T17:05:52 WIB" name="testCleanupTestData" description="Membersihkan semua data uji dari database" depends-on-groups="product, footprint, wc_request, complain, transaction" finished-at="2026-06-07T17:05:52 WIB" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCleanupTestData -->
+      </class> <!-- TesApp -->
+    </test> <!-- WaterFutrace Integration Tests -->
+  </suite> <!-- WaterFutraceTestSuite -->
+</testng-results>

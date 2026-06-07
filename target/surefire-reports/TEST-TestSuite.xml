@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="7.096" tests="47" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Asus\Kampus\semester4\Pemrograman Berorientasi Object\WaterFutraceGui\target\test-classes;C:\Users\Asus\Kampus\semester4\Pemrograman Berorientasi Object\WaterFutraceGui\target\classes;C:\Users\Asus\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\Asus\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\Asus\.m2\repository\com\formdev\flatlaf\3.4.1\flatlaf-3.4.1.jar;C:\Users\Asus\.m2\repository\com\formdev\flatlaf-extras\3.4.1\flatlaf-extras-3.4.1.jar;C:\Users\Asus\.m2\repository\com\github\weisj\jsvg\1.4.0\jsvg-1.4.0.jar;C:\Users\Asus\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\Asus\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Asus\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Asus\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ID"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\Asus\AppData\Local\Temp\surefire3370696841933301057\surefirebooter-20260607170544761_3.jar C:\Users\Asus\AppData\Local\Temp\surefire3370696841933301057 2026-06-07T17-05-43_432-jvmRun1 surefire-20260607170544761_1tmp surefire_0-20260607170544761_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Asus\Kampus\semester4\Pemrograman Berorientasi Object\WaterFutraceGui\target\test-classes;C:\Users\Asus\Kampus\semester4\Pemrograman Berorientasi Object\WaterFutraceGui\target\classes;C:\Users\Asus\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\Asus\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\Asus\.m2\repository\com\formdev\flatlaf\3.4.1\flatlaf-3.4.1.jar;C:\Users\Asus\.m2\repository\com\formdev\flatlaf-extras\3.4.1\flatlaf-extras-3.4.1.jar;C:\Users\Asus\.m2\repository\com\github\weisj\jsvg\1.4.0\jsvg-1.4.0.jar;C:\Users\Asus\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\Asus\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Asus\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Asus\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Asus"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Asus\Kampus\semester4\Pemrograman Berorientasi Object\WaterFutraceGui"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Asus\AppData\Local\Temp\surefire3370696841933301057\surefirebooter-20260607170544761_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.2+10-LTS-69"/>
+    <property name="user.name" value="Asus"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Asus\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Asus\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="C:\Users\Asus\Kampus\semester4\Pemrograman Berorientasi Object\WaterFutraceGui"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/Asus/.gemini/antigravity/bin;C:\Users\Asus\AppData\Roaming\Antigravity\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\intel64\libfabric\bin\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\intel64\libfabric\bin\utils;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\intel64\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\ia32;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\intel64;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\heroku\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl;C:\Program Files (x86)\Borland\Delphi7\Rave5;C:\delphi7\Delphi7\Bin;C:\delphi7\Delphi7\Projects\Bpl;C:\delphi7\Delphi7\Rave5;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\MinGW\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\intel64\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\ia32\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Common Files\AspenTech Shared\;C:\Program Files\Common Files\AspenTech Shared\;C:\Program Files\Go\bin;C:\Users\Asus\AppData\Local\com.LangflowDesktop\uv;C:\Users\Asus\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Asus\AppData\Local\Programs\Python\Python311\;C:\Users\Asus\AppData\Local\Microsoft\WindowsApps;C:\Users\Asus\AppData\Local\Programs\Microsoft VS Code\bin;C:\ProgramData\Asus\GitHubDesktop\bin;C:\Users\Asus\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Windows\;C:\Users\Asus\AppData\Local\Programs\Python\Python311\python.exe;C:\xampp\php;C:\xampp\mysql;C:\Users\Asus\AppData\Roaming\Composer\vendor\bin;C:\nginx;C:\ngrok;C:\Program Files\Java\jdk-25.0.2\bin;C:\Program Files\Common Files\AspenTech Shared\;C:\Program Files\Go\;C:\Users\Asus\go\bin;C:\Users\Asus\Downloads\chromedriver-win64\chromedriver-win64;C:\Users\Asus\Downloads\apache-maven-3.9.15-bin\bin;C:\Program Files\Tesseract-OCR;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.2+10-LTS-69"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testDatabaseConnection" classname="TesApp" time="0.488">
+    <system-out><![CDATA[...
+... TestNG 7.8.0 by Cédric Beust (cedric@beust.com)
+...
+
+[PASS] Koneksi database berhasil.
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testPasswordHashAndVerify" classname="TesApp" time="0.004">
+    <system-out><![CDATA[[PASS] PasswordUtil: hash = Uzv/8Hq0vFySkkL7EQdS...
+]]></system-out>
+  </testcase>
+  <testcase name="testPasswordHashIsUnique" classname="TesApp" time="0.002">
+    <system-out><![CDATA[[PASS] Hash bersifat unik karena random salt.
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginUnknownEmailFails" classname="TesApp" time="0.069">
+    <system-out><![CDATA[[PASS] Email tidak terdaftar ditolak.
+]]></system-out>
+  </testcase>
+  <testcase name="testRegionExists" classname="TesApp" time="0.014">
+    <system-out><![CDATA[[PASS] Region ditemukan: Jawa Barat
+]]></system-out>
+  </testcase>
+  <testcase name="testRegionFindAll" classname="TesApp" time="0.016">
+    <system-out><![CDATA[[PASS] Total region di DB: 12
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterCompany" classname="TesApp" time="0.16">
+    <system-out><![CDATA[[PASS] Company terdaftar: Company Test 2ae00a78 (id=6)
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterGovernment" classname="TesApp" time="0.05">
+    <system-out><![CDATA[[PASS] Government terdaftar: Gov Test 2ae00a78 (id=7)
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterIndividual1" classname="TesApp" time="0.096">
+    <system-out><![CDATA[[PASS] Individual1 terdaftar: Individual1 Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterIndividual2" classname="TesApp" time="0.092">
+    <system-out><![CDATA[[PASS] Individual2 terdaftar: Individual2 Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterInvalidRegionFails" classname="TesApp" time="0.021">
+    <system-out><![CDATA[[PASS] Region tidak valid ditolak: Region tidak ditemukan: REGION_TIDAK_ADA_XYZ
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginUnapprovedCompanyFails" classname="TesApp" time="0.015">
+    <system-out><![CDATA[[PASS] Login Company belum approve ditolak: Akun Anda belum disetujui oleh Government.
+Silakan tunggu persetujuan.
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginGovernmentSuccess" classname="TesApp" time="0.014">
+    <system-out><![CDATA[[PASS] Login Government berhasil: Gov Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginWrongPasswordFails" classname="TesApp" time="0.015">
+    <system-out><![CDATA[[PASS] Password salah ditolak: Email atau password salah.
+]]></system-out>
+  </testcase>
+  <testcase name="testRegisterDuplicateEmailFails" classname="TesApp" time="0.016">
+    <system-out><![CDATA[[PASS] Duplikat email ditolak: Email sudah digunakan. Gunakan email lain.
+]]></system-out>
+  </testcase>
+  <testcase name="testApproveCompany" classname="TesApp" time="0.028">
+    <system-out><![CDATA[[PASS] Company diapprove: Company Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testApproveIndividual1" classname="TesApp" time="0.029">
+    <system-out><![CDATA[[PASS] Individual1 diapprove: Individual1 Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testApproveIndividual2" classname="TesApp" time="0.027">
+    <system-out><![CDATA[[PASS] Individual2 diapprove: Individual2 Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testGetPendingUsers" classname="TesApp" time="0.205">
+    <system-out><![CDATA[[PASS] Jumlah user pending di region: 0
+]]></system-out>
+  </testcase>
+  <testcase name="testLoginApprovedCompanySuccess" classname="TesApp" time="0.016">
+    <system-out><![CDATA[[PASS] Login Company setelah approve berhasil: Company Test 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testInsertComplain" classname="TesApp" time="0.13">
+    <system-out><![CDATA[[PASS] Komplain tersimpan: 07e34c10-addd-4519-86c5-9b21377e95f8
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateOnsiteRequest" classname="TesApp" time="0.196">
+    <system-out><![CDATA[[PASS] ONSITE request dibuat: id=3
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateRandomRequest" classname="TesApp" time="0.062">
+    <system-out><![CDATA[[PASS] RANDOM request dibuat: id=4
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAllIndividualsSorted" classname="TesApp" time="0.119">
+    <system-out><![CDATA[[PASS] getAllIndividualsSorted: 3 individual terurut
+]]></system-out>
+  </testcase>
+  <testcase name="testCalculateGovernmentFootprint" classname="TesApp" time="0.063">
+    <system-out><![CDATA[[PASS] BWF dihitung: 1010.0
+]]></system-out>
+  </testcase>
+  <testcase name="testFindComplainByReceiver" classname="TesApp" time="0.051">
+    <system-out><![CDATA[[PASS] findByReceiver: 1 komplain ditemukan
+]]></system-out>
+  </testcase>
+  <testcase name="testFindComplainBySender" classname="TesApp" time="0.027">
+    <system-out><![CDATA[[PASS] findBySender: 1 komplain ditemukan
+]]></system-out>
+  </testcase>
+  <testcase name="testApproveOnsiteRequest" classname="TesApp" time="0.456">
+    <system-out><![CDATA[[PASS] ONSITE request diapprove. Seller: 10.0 -> 9.999 | Buyer: 0.0 -> 0.001
+]]></system-out>
+  </testcase>
+  <testcase name="testGetSentRequests" classname="TesApp" time="0.124">
+    <system-out><![CDATA[[PASS] getSentRequests: 2 request terkirim
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateComplain" classname="TesApp" time="0.057">
+    <system-out><![CDATA[[PASS] Komplain diupdate status: IN_PROGRESS
+]]></system-out>
+  </testcase>
+  <testcase name="testApproveAlreadyProcessedRequestFails" classname="TesApp" time="0.089">
+    <system-out><![CDATA[[PASS] Double-approve ditolak: Permintaan sudah diproses sebelumnya.
+]]></system-out>
+  </testcase>
+  <testcase name="testSetCompanyEtaSl" classname="TesApp" time="0.107">
+    <system-out><![CDATA[[PASS] Eta=0.8 Sl=0.2 tersimpan.
+]]></system-out>
+  </testcase>
+  <testcase name="testResolveComplain" classname="TesApp" time="0.067">
+    <system-out><![CDATA[[PASS] Komplain RESOLVED: 07e34c10-addd-4519-86c5-9b21377e95f8
+]]></system-out>
+  </testcase>
+  <testcase name="testDistributeCredit" classname="TesApp" time="0.328">
+    <system-out><![CDATA[[PASS] Distribusi berhasil. BWF=1010.0 | Companies=3 | Region=Jawa Barat
+]]></system-out>
+  </testcase>
+  <testcase name="testCalculateCompanyCredit" classname="TesApp" time="0.232">
+    <system-out><![CDATA[[PASS] Company water credit: 25600.42666666667
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateProduct" classname="TesApp" time="0.113">
+    <system-out><![CDATA[[PASS] Produk dibuat: Produk Tes 2ae00a78 (id=2)
+]]></system-out>
+  </testcase>
+  <testcase name="testGetRegionalCompanyCredit" classname="TesApp" time="0.132">
+    <system-out><![CDATA[[PASS] Regional company credit untuk Individual1: 25780.593337346716
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateProductInsufficientCreditFails" classname="TesApp" time="0.306">
+    <system-out><![CDATA[[PASS] Pembuatan produk ditolak karena kredit tidak cukup: Kredit air tidak mencukupi. Saldo: 0,00, Butuh: 999999,00
+[CLEANUP]   Deleted 1 row(s) | SQL: DELETE FROM company WHERE id_company = ?...
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAllProducts" classname="TesApp" time="0.098">
+    <system-out><![CDATA[[PASS] getAllProducts: 2 produk ditemukan
+]]></system-out>
+  </testcase>
+  <testcase name="testGetMyProducts" classname="TesApp" time="0.077">
+    <system-out><![CDATA[[PASS] getMyProducts: 1 produk milik company
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateProduct" classname="TesApp" time="0.09">
+    <system-out><![CDATA[[PASS] Produk diupdate: Produk Updated 2ae00a78
+]]></system-out>
+  </testcase>
+  <testcase name="testPurchaseProduct" classname="TesApp" time="0.259">
+    <system-out><![CDATA[[PASS] Pembelian berhasil. TX_ID=1 | Credit: 11.0 -> 10.0 | Stok: 8 -> 6
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAllTransactions" classname="TesApp" time="0.102">
+    <system-out><![CDATA[[PASS] getAllTransactions: 1 total transaksi
+]]></system-out>
+  </testcase>
+  <testcase name="testGetMyTransactions" classname="TesApp" time="0.067">
+    <system-out><![CDATA[[PASS] getMyTransactions: 1 transaksi ditemukan
+]]></system-out>
+  </testcase>
+  <testcase name="testPurchaseInsufficientCreditFails" classname="TesApp" time="0.078">
+    <system-out><![CDATA[[PASS] Pembelian ditolak karena credit 0: Water credit tidak mencukupi. Kredit Anda: 0,00, Total harga: 0,50
+]]></system-out>
+  </testcase>
+  <testcase name="testPurchaseZeroQuantityFails" classname="TesApp" time="0.016">
+    <system-out><![CDATA[[PASS] Quantity 0 ditolak: Jumlah pembelian harus lebih dari 0.
+]]></system-out>
+  </testcase>
+  <testcase name="testCleanupTestData" classname="TesApp" time="0.155">
+    <system-out><![CDATA[[CLEANUP] Memulai pembersihan data uji dengan SUFFIX: 2ae00a78
+[CLEANUP]   Deleted 1 row(s) | SQL: DELETE FROM complains WHERE id_complain = ?...
+[CLEANUP]   Deleted 2 row(s) | SQL: DELETE FROM water_credit_request WHERE id_buyer = ?...
+]]></system-out>
+    <system-err><![CDATA[[CLEANUP ERROR] Rollback karena: Table 'waterfutrace.transaction' doesn't exist
+]]></system-err>
+  </testcase>
+</testsuite>

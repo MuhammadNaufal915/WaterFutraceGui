@@ -16,14 +16,14 @@ import java.util.Map;
  */
 public class GovernmentPanel extends JPanel {
 
-    private static final Color BG = new Color(10, 14, 26);
-    private static final Color CARD_BG = new Color(18, 28, 50);
-    private static final Color CYAN = new Color(0, 212, 255);
+    private static final Color BG = new Color(238, 242, 247);
+    private static final Color CARD_BG = new Color(255, 255, 255);
+    private static final Color CYAN = new Color(37, 99, 235); // Royal Blue
     private static final Color GREEN = new Color(16, 185, 129);
     private static final Color AMBER = new Color(245, 158, 11);
-    private static final Color TEXT_WHITE = new Color(248, 250, 252);
+    private static final Color TEXT_WHITE = new Color(15, 23, 42); // Dark text
     private static final Color TEXT_MUTED = new Color(100, 116, 139);
-    private static final Color INPUT_BG = new Color(30, 44, 70);
+    private static final Color INPUT_BG = new Color(248, 250, 252);
     private static final Color ERROR_RED = new Color(239, 68, 68);
 
     private final FootprintService footprintService = new FootprintService();
@@ -116,14 +116,14 @@ public class GovernmentPanel extends JPanel {
         taResult = new JTextArea("Hasil akan muncul di sini setelah distribusi dilakukan.");
         taResult.setFont(new Font("Consolas", Font.PLAIN, 13));
         taResult.setForeground(TEXT_WHITE);
-        taResult.setBackground(new Color(10, 20, 40));
+        taResult.setBackground(new Color(248, 250, 252));
         taResult.setEditable(false);
         taResult.setLineWrap(true);
         taResult.setWrapStyleWord(true);
         taResult.setBorder(new EmptyBorder(12, 12, 12, 12));
 
         JScrollPane scroll = new JScrollPane(taResult);
-        scroll.setBorder(new LineBorder(new Color(30, 41, 59), 1));
+        scroll.setBorder(new LineBorder(new Color(226, 232, 240), 1));
         resultCard.add(scroll, BorderLayout.CENTER);
 
         content.add(formCard);
@@ -228,7 +228,7 @@ public class GovernmentPanel extends JPanel {
         tf.setForeground(TEXT_WHITE);
         tf.setBackground(INPUT_BG);
         tf.setCaretColor(CYAN);
-        tf.setBorder(new CompoundBorder(new LineBorder(new Color(51, 65, 85), 1, true), new EmptyBorder(8, 12, 8, 12)));
+        tf.setBorder(new CompoundBorder(new LineBorder(new Color(226, 232, 240), 1, true), new EmptyBorder(8, 12, 8, 12)));
         tf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
         tf.setAlignmentX(LEFT_ALIGNMENT);
         tf.setToolTipText(tooltip);

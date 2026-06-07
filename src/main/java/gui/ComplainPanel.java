@@ -21,15 +21,15 @@ import java.util.UUID;
  */
 public class ComplainPanel extends JPanel {
 
-    private static final Color BG         = new Color(10, 14, 26);
-    private static final Color CARD_BG    = new Color(18, 28, 50);
-    private static final Color CYAN       = new Color(0, 212, 255);
+    private static final Color BG         = new Color(238, 242, 247);
+    private static final Color CARD_BG    = new Color(255, 255, 255);
+    private static final Color CYAN       = new Color(37, 99, 235); // Royal Blue
     private static final Color GREEN      = new Color(16, 185, 129);
     private static final Color AMBER      = new Color(245, 158, 11);
     private static final Color DANGER     = new Color(239, 68, 68);
-    private static final Color TEXT_WHITE = new Color(248, 250, 252);
+    private static final Color TEXT_WHITE = new Color(15, 23, 42); // Dark text
     private static final Color TEXT_MUTED = new Color(100, 116, 139);
-    private static final Color INPUT_BG   = new Color(30, 44, 70);
+    private static final Color INPUT_BG   = new Color(248, 250, 252);
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
     private final ComplainDAO   complainDAO   = new ComplainDAO();
@@ -130,7 +130,7 @@ public class ComplainPanel extends JPanel {
         taDesc.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         taDesc.setForeground(TEXT_WHITE); taDesc.setBackground(INPUT_BG);
         taDesc.setCaretColor(CYAN); taDesc.setLineWrap(true); taDesc.setWrapStyleWord(true);
-        taDesc.setBorder(new CompoundBorder(new LineBorder(new Color(51,65,85),1,true), new EmptyBorder(8,12,8,12)));
+        taDesc.setBorder(new CompoundBorder(new LineBorder(new Color(226,232,240),1,true), new EmptyBorder(8,12,8,12)));
         JScrollPane descScroll = new JScrollPane(taDesc);
         descScroll.setMaximumSize(new Dimension(Integer.MAX_VALUE, 90));
         descScroll.setAlignmentX(LEFT_ALIGNMENT);
@@ -159,7 +159,7 @@ public class ComplainPanel extends JPanel {
 
         taDetail = new JTextArea("Pilih pengaduan dari daftar untuk melihat detail.");
         taDetail.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-        taDetail.setForeground(TEXT_WHITE); taDetail.setBackground(new Color(10,20,40));
+        taDetail.setForeground(TEXT_WHITE); taDetail.setBackground(new Color(248,250,252));
         taDetail.setEditable(false); taDetail.setLineWrap(true); taDetail.setWrapStyleWord(true);
         taDetail.setBorder(new EmptyBorder(10,10,10,10));
         JScrollPane detScroll = new JScrollPane(taDetail);
@@ -183,7 +183,7 @@ public class ComplainPanel extends JPanel {
             taReply.setFont(new Font("Segoe UI", Font.PLAIN, 13));
             taReply.setForeground(TEXT_WHITE); taReply.setBackground(INPUT_BG);
             taReply.setCaretColor(CYAN); taReply.setLineWrap(true); taReply.setWrapStyleWord(true);
-            taReply.setBorder(new CompoundBorder(new LineBorder(new Color(51,65,85),1,true), new EmptyBorder(8,8,8,8)));
+            taReply.setBorder(new CompoundBorder(new LineBorder(new Color(226,232,240),1,true), new EmptyBorder(8,8,8,8)));
             JScrollPane rs = new JScrollPane(taReply);
             rs.setMaximumSize(new Dimension(Integer.MAX_VALUE, 80));
             rs.setAlignmentX(LEFT_ALIGNMENT);
@@ -318,14 +318,14 @@ public class ComplainPanel extends JPanel {
     private void setOk(String m)  { if (lblStatus != null) { lblStatus.setText(m); lblStatus.setForeground(GREEN); } }
 
     private void styleTable(JTable t) {
-        t.setBackground(CARD_BG); t.setForeground(TEXT_WHITE); t.setGridColor(new Color(30,41,59));
+        t.setBackground(CARD_BG); t.setForeground(TEXT_WHITE); t.setGridColor(new Color(226,232,240));
         t.setRowHeight(34); t.setFont(new Font("Segoe UI", Font.PLAIN, 12));
-        t.setSelectionBackground(new Color(0,212,255,50)); t.setSelectionForeground(TEXT_WHITE);
+        t.setSelectionBackground(new Color(37, 99, 235, 30)); t.setSelectionForeground(TEXT_WHITE);
         t.setShowVerticalLines(false); t.setFillsViewportHeight(true);
         JTableHeader th = t.getTableHeader();
-        th.setBackground(new Color(15,23,50)); th.setForeground(CYAN);
+        th.setBackground(new Color(248,250,252)); th.setForeground(CYAN);
         th.setFont(new Font("Segoe UI", Font.BOLD, 12));
-        th.setBorder(new MatteBorder(0,0,1,0, new Color(30,41,59)));
+        th.setBorder(new MatteBorder(0,0,1,0, new Color(226,232,240)));
     }
 
     private JLabel fldLabel(String text) {
@@ -337,7 +337,7 @@ public class ComplainPanel extends JPanel {
         JTextField tf = new JTextField();
         tf.setFont(new Font("Segoe UI", Font.PLAIN, 13)); tf.setForeground(TEXT_WHITE);
         tf.setBackground(INPUT_BG); tf.setCaretColor(CYAN);
-        tf.setBorder(new CompoundBorder(new LineBorder(new Color(51,65,85),1,true), new EmptyBorder(7,10,7,10)));
+        tf.setBorder(new CompoundBorder(new LineBorder(new Color(226,232,240),1,true), new EmptyBorder(7,10,7,10)));
         tf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 38)); tf.setAlignmentX(LEFT_ALIGNMENT);
         return tf;
     }
