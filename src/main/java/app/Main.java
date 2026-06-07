@@ -33,9 +33,9 @@ public class Main {
             UIManager.put("Table.showHorizontalLines", true);
             UIManager.put("Table.intercellSpacing", new Dimension(0, 1));
 
-            FlatDarkLaf.setup();
-            UIManager.put("Table.background", new Color(18, 28, 50));
-            UIManager.put("Table.alternateRowColor", new Color(22, 34, 58));
+            com.formdev.flatlaf.FlatLightLaf.setup();
+            UIManager.put("Table.background", Color.WHITE);
+            UIManager.put("Table.alternateRowColor", new Color(248, 250, 252));
         } catch (Exception e) {
             System.err.println("[Main] FlatLaf gagal dimuat, menggunakan L&F default: " + e.getMessage());
             try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }

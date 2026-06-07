@@ -16,13 +16,13 @@ import java.util.Optional;
  */
 public class DashboardPanel extends JPanel {
 
-    private static final Color BG         = new Color(10, 14, 26);
-    private static final Color CARD_BG    = new Color(18, 28, 50);
-    private static final Color CYAN       = new Color(0, 212, 255);
+    private static final Color BG         = new Color(238, 242, 247);
+    private static final Color CARD_BG    = new Color(255, 255, 255);
+    private static final Color CYAN       = new Color(37, 99, 235); // Royal Blue
     private static final Color GREEN      = new Color(16, 185, 129);
     private static final Color AMBER      = new Color(245, 158, 11);
     private static final Color PURPLE     = new Color(139, 92, 246);
-    private static final Color TEXT_WHITE = new Color(248, 250, 252);
+    private static final Color TEXT_WHITE = new Color(15, 23, 42); // Dark text
     private static final Color TEXT_MUTED = new Color(100, 116, 139);
 
     private JPanel statsRow;

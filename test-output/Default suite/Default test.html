@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>47/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jun 07 17:07:00 WIB 2026</td>
+</tr>
+<tr><td>Total time:</td><td>4 seconds (4196 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TesApp.testLoginWrongPasswordFails()'><b>testLoginWrongPasswordFails</b><br>Test class: TesApp<br>Test method: Login dengan password salah harus gagal</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCalculateCompanyCredit()'><b>testCalculateCompanyCredit</b><br>Test class: TesApp<br>Test method: Company berhasil menghitung water credit sendiri</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testUpdateProduct()'><b>testUpdateProduct</b><br>Test class: TesApp<br>Test method: Company berhasil mengupdate produk</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testPurchaseProduct()'><b>testPurchaseProduct</b><br>Test class: TesApp<br>Test method: Individual berhasil membeli produk</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testResolveComplain()'><b>testResolveComplain</b><br>Test class: TesApp<br>Test method: Government menyelesaikan komplain dengan status RESOLVED</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegionExists()'><b>testRegionExists</b><br>Test class: TesApp<br>Test method: Region 'Jawa Barat' ditemukan di database</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegisterIndividual1()'><b>testRegisterIndividual1</b><br>Test class: TesApp<br>Test method: Registrasi akun INDIVIDUAL pertama berhasil</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetSentRequests()'><b>testGetSentRequests</b><br>Test class: TesApp<br>Test method: getSentRequests mengembalikan request yang dikirim buyer</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetAllProducts()'><b>testGetAllProducts</b><br>Test class: TesApp<br>Test method: getAllProducts mengembalikan daftar produk</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testFindComplainByReceiver()'><b>testFindComplainByReceiver</b><br>Test class: TesApp<br>Test method: findByReceiver mengembalikan komplain yang diterima Government</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegisterCompany()'><b>testRegisterCompany</b><br>Test class: TesApp<br>Test method: Registrasi akun COMPANY berhasil (belum approved)</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCreateProductInsufficientCreditFails()'><b>testCreateProductInsufficientCreditFails</b><br>Test class: TesApp<br>Test method: Pembuatan produk gagal jika water credit tidak cukup</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testApproveAlreadyProcessedRequestFails()'><b>testApproveAlreadyProcessedRequestFails</b><br>Test class: TesApp<br>Test method: Menyetujui request yang sudah diproses harus gagal</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testDatabaseConnection()'><b>testDatabaseConnection</b><br>Test class: TesApp<br>Test method: Verifikasi koneksi ke database MySQL berhasil</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCreateRandomRequest()'><b>testCreateRandomRequest</b><br>Test class: TesApp<br>Test method: Individual membuat permintaan beli water credit RANDOM/broadcast</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testPasswordHashIsUnique()'><b>testPasswordHashIsUnique</b><br>Test class: TesApp<br>Test method: Setiap hashing menghasilkan hash yang berbeda (salt acak)</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegisterIndividual2()'><b>testRegisterIndividual2</b><br>Test class: TesApp<br>Test method: Registrasi akun INDIVIDUAL kedua berhasil</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetPendingUsers()'><b>testGetPendingUsers</b><br>Test class: TesApp<br>Test method: getPendingUsersInRegion mengembalikan user yang belum diapprove</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCreateOnsiteRequest()'><b>testCreateOnsiteRequest</b><br>Test class: TesApp<br>Test method: Individual membuat permintaan beli water credit ONSITE</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testApproveOnsiteRequest()'><b>testApproveOnsiteRequest</b><br>Test class: TesApp<br>Test method: Seller berhasil menyetujui permintaan ONSITE</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testUpdateComplain()'><b>testUpdateComplain</b><br>Test class: TesApp<br>Test method: Government berhasil membalas dan mengupdate status komplain</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testApproveCompany()'><b>testApproveCompany</b><br>Test class: TesApp<br>Test method: Government berhasil approve Company</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCleanupTestData()'><b>testCleanupTestData</b><br>Test class: TesApp<br>Test method: Membersihkan semua data uji dari database</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegisterInvalidRegionFails()'><b>testRegisterInvalidRegionFails</b><br>Test class: TesApp<br>Test method: Registrasi dengan region tidak valid harus melempar exception</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetRegionalCompanyCredit()'><b>testGetRegionalCompanyCredit</b><br>Test class: TesApp<br>Test method: Individual mendapatkan total regional company credit</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testPurchaseZeroQuantityFails()'><b>testPurchaseZeroQuantityFails</b><br>Test class: TesApp<br>Test method: Pembelian dengan quantity <= 0 harus gagal</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetMyProducts()'><b>testGetMyProducts</b><br>Test class: TesApp<br>Test method: getMyProducts mengembalikan produk milik Company</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testLoginUnknownEmailFails()'><b>testLoginUnknownEmailFails</b><br>Test class: TesApp<br>Test method: Login dengan email tidak terdaftar harus gagal</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testInsertComplain()'><b>testInsertComplain</b><br>Test class: TesApp<br>Test method: Individual berhasil mengirim komplain ke Government</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testFindComplainBySender()'><b>testFindComplainBySender</b><br>Test class: TesApp<br>Test method: findBySender mengembalikan komplain yang dikirim user</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testDistributeCredit()'><b>testDistributeCredit</b><br>Test class: TesApp<br>Test method: Distribusi water credit ke Company dan Individual berhasil</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testLoginGovernmentSuccess()'><b>testLoginGovernmentSuccess</b><br>Test class: TesApp<br>Test method: Login Government dengan kredensial benar berhasil</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegionFindAll()'><b>testRegionFindAll</b><br>Test class: TesApp<br>Test method: findAll region mengembalikan data</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testApproveIndividual2()'><b>testApproveIndividual2</b><br>Test class: TesApp<br>Test method: Government berhasil approve Individual 2</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testPasswordHashAndVerify()'><b>testPasswordHashAndVerify</b><br>Test class: TesApp<br>Test method: Hashing password menghasilkan hash yang dapat diverifikasi</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testApproveIndividual1()'><b>testApproveIndividual1</b><br>Test class: TesApp<br>Test method: Government berhasil approve Individual 1</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testLoginApprovedCompanySuccess()'><b>testLoginApprovedCompanySuccess</b><br>Test class: TesApp<br>Test method: Login Company berhasil setelah diapprove</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testPurchaseInsufficientCreditFails()'><b>testPurchaseInsufficientCreditFails</b><br>Test class: TesApp<br>Test method: Pembelian gagal jika water credit tidak cukup</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCalculateGovernmentFootprint()'><b>testCalculateGovernmentFootprint</b><br>Test class: TesApp<br>Test method: Government berhasil menghitung Blue Water Footprint</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegisterGovernment()'><b>testRegisterGovernment</b><br>Test class: TesApp<br>Test method: Registrasi akun GOVERNMENT berhasil dan langsung approved</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testCreateProduct()'><b>testCreateProduct</b><br>Test class: TesApp<br>Test method: Company berhasil membuat produk baru</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetAllTransactions()'><b>testGetAllTransactions</b><br>Test class: TesApp<br>Test method: getAllTransactions mengembalikan semua transaksi</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetAllIndividualsSorted()'><b>testGetAllIndividualsSorted</b><br>Test class: TesApp<br>Test method: getAllIndividualsSorted mengembalikan list individual terurut</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testGetMyTransactions()'><b>testGetMyTransactions</b><br>Test class: TesApp<br>Test method: getMyTransactions mengembalikan riwayat transaksi Individual</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testRegisterDuplicateEmailFails()'><b>testRegisterDuplicateEmailFails</b><br>Test class: TesApp<br>Test method: Registrasi dengan email duplikat harus melempar exception</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testLoginUnapprovedCompanyFails()'><b>testLoginUnapprovedCompanyFails</b><br>Test class: TesApp<br>Test method: Login Company yang belum diapprove harus gagal</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+<tr>
+<td title='TesApp.testSetCompanyEtaSl()'><b>testSetCompanyEtaSl</b><br>Test class: TesApp<br>Test method: Set eta dan sl pada Company untuk keperluan distribusi</td>
+<td></td>
+<td>0</td>
+<td>TesApp@6572421</td></tr>
+</table><p>
+</body>
+</html>

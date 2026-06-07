@@ -16,13 +16,13 @@ import java.util.Optional;
  */
 public class CompanyPanel extends JPanel {
 
-    private static final Color BG         = new Color(10, 14, 26);
-    private static final Color CARD_BG    = new Color(18, 28, 50);
-    private static final Color CYAN       = new Color(0, 212, 255);
+    private static final Color BG         = new Color(238, 242, 247);
+    private static final Color CARD_BG    = new Color(255, 255, 255);
+    private static final Color CYAN       = new Color(37, 99, 235); // Royal Blue
     private static final Color GREEN      = new Color(16, 185, 129);
-    private static final Color TEXT_WHITE = new Color(248, 250, 252);
+    private static final Color TEXT_WHITE = new Color(15, 23, 42); // Dark text
     private static final Color TEXT_MUTED = new Color(100, 116, 139);
-    private static final Color INPUT_BG   = new Color(30, 44, 70);
+    private static final Color INPUT_BG   = new Color(248, 250, 252);
 
     private final CompanyDAO companyDAO = new CompanyDAO();
 
@@ -195,7 +195,7 @@ public class CompanyPanel extends JPanel {
         tf.setForeground(TEXT_WHITE);
         tf.setBackground(INPUT_BG);
         tf.setCaretColor(CYAN);
-        tf.setBorder(new CompoundBorder(new LineBorder(new Color(51, 65, 85), 1, true), new EmptyBorder(8, 12, 8, 12)));
+        tf.setBorder(new CompoundBorder(new LineBorder(new Color(226, 232, 240), 1, true), new EmptyBorder(8, 12, 8, 12)));
         tf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
         tf.setAlignmentX(LEFT_ALIGNMENT);
         tf.setToolTipText(tooltip);

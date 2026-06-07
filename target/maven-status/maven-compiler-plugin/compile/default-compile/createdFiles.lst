@@ -23,12 +23,14 @@ model\User.class
 database\DatabaseInit.class
 gui\UserManagementPanel.class
 gui\ProductPanel$1.class
+gui\LoginFrame$7.class
 gui\UserManagementPanel$1.class
 gui\WaterCreditPanel$1.class
 database\DatabaseHelper.class
 dao\CompanyDAO.class
 gui\DashboardPanel$1.class
 dao\IndividualDAO.class
+gui\LoginFrame$10.class
 gui\LoginFrame$1.class
 model\WaterCreditRequest$RequestMode.class
 dao\ProductDAO.class
@@ -40,8 +42,10 @@ gui\GovernmentPanel.class
 dao\ComplainDAO.class
 gui\LoginFrame$4.class
 gui\TransactionPanel$2.class
+gui\LoginFrame$8.class
 gui\WaterCreditPanel.class
 dao\WaterCreditRequestDAO.class
+gui\LoginFrame$11.class
 gui\MainFrame$2.class
 gui\ComplainPanel.class
 gui\WaterCreditPanel$4.class
@@ -62,6 +66,7 @@ gui\TransactionPanel$1.class
 utils\ValidationUtil.class
 gui\LoginFrame$3.class
 dao\WaterFootprintDAO.class
+gui\LoginFrame$9.class
 dao\TransactionItemDAO.class
 model\Complain.class
 gui\RegisterFrame.class

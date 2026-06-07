@@ -15,7 +15,7 @@ import java.awt.event.*;
  */
 public class MainFrame extends JFrame {
 
-    private static final Color BG_DARK     = new Color(10, 14, 26);
+    private static final Color BG_DARK     = new Color(238, 242, 247);
     private static final Color SIDEBAR_BG  = new Color(15, 23, 50);
     private static final Color ACCENT_CYAN = new Color(0, 212, 255);
     private static final Color TEXT_WHITE  = new Color(248, 250, 252);
@@ -190,23 +190,23 @@ public class MainFrame extends JFrame {
 
         // Header bar
         JPanel header = new JPanel(new BorderLayout());
-        header.setBackground(new Color(15, 23, 50));
+        header.setBackground(Color.WHITE);
         header.setBorder(new CompoundBorder(
-            new MatteBorder(0, 0, 1, 0, new Color(30, 41, 59)),
+            new MatteBorder(0, 0, 1, 0, new Color(226, 232, 240)),
             new EmptyBorder(12, 24, 12, 24)
         ));
         header.setPreferredSize(new Dimension(0, 56));
 
         JLabel lblTitle = new JLabel("WaterFutrace Desktop");
         lblTitle.setFont(new Font("Segoe UI", Font.BOLD, 16));
-        lblTitle.setForeground(TEXT_WHITE);
+        lblTitle.setForeground(new Color(15, 23, 42));
         header.add(lblTitle, BorderLayout.WEST);
 
         JLabel lblRole = new JLabel(user != null ?
             user.getRole().name() + " · " + (user.isApproved() ? "✅ Aktif" : "⏳ Pending")
             : "");
         lblRole.setFont(new Font("Segoe UI", Font.PLAIN, 12));
-        lblRole.setForeground(TEXT_MUTED);
+        lblRole.setForeground(new Color(100, 116, 139));
         header.add(lblRole, BorderLayout.EAST);
 
         // Content panels
